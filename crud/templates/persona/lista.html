@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    {%if personas %}
+        <ul>
+            {% for persona in personas %}
+                <li>{{ persona.nombre }} {{ persona.apellido }} - {{ persona.edad }} años</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay personas registradas.</p>
+    {% endif %}
+{% endblock content %}
