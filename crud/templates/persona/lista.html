@@ -4,7 +4,7 @@
     {%if personas %}
         <ul>
             {% for persona in personas %}
-                <li>{{ persona.nombre }} {{ persona.apellido }} - {{ persona.edad }} años</li>
+                <li>{{ persona.nombre }} - {{ persona.email }}</li>
             {% endfor %}
         </ul>
     {% else %}
