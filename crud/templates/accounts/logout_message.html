@@ -1,0 +1,9 @@
+{%extends 'base.html' %}
+{% block content %}
+    <form method="post" action="{% url 'accounts:logout' %}">
+        {% csrf_token %}
+        <h2>{{title}}</h2>
+        <h2>te queres desloguear?</h2>
+        <button type="submit">cerrar sesion</button>
+        <a href="{% url 'persona:lista' %}">volver a la lista</a>
+{% endblock %}
