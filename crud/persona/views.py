@@ -39,3 +39,19 @@ class DeletePersonaView(LoginRequiredMixin, DeleteView):
         context['action'] = 'Eliminar Persona'
         return context
 
+class PersonaSearchView(ListView):
+    model = Persona
+    template_name = "persona/buscar.html"
+    context_object_name = "personas"
+    
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            return Persona.objects.filter(nombre__icontains=query)
+        else:
+            return Persona.objects.none()
+        
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q', '')
+        return context

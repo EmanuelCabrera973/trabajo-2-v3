@@ -27,5 +27,10 @@ urlpatterns = [
         'eliminar/<int:pk>/',
         DeletePersonaView.as_view(),
         name='eliminar',
-    )
+    ),
+    path(
+        'buscar/',
+        PersonaSearchView.as_view(),
+        name='buscar',
+    ),
 ]
