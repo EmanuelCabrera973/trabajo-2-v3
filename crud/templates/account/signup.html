@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {%block content%}
     <form method="post">
         {% csrf_token %}
         <h2>{{ title }}</h2>
-        {{ form.as_p }}
+        {{ form|crispy }}
         <button type="submit">iniciar sesion</button>
-        <p>ya tenes cuenta? <a href="{% url 'accounts:login' %}">iniciar cesion</a></p>
+        <p>ya tenes cuenta? <a href="{% url 'account_login' %}">iniciar cesion</a></p>
     </form>
 {%endblock%}

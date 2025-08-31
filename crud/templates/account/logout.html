@@ -1,6 +1,6 @@
 {%extends 'base.html' %}
 {% block content %}
-    <form method="post" action="{% url 'accounts:logout' %}">
+    <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
         <h2>{{title}}</h2>
         <h2>te queres desloguear?</h2>
