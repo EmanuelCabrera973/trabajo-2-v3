@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Detalle de Persona</h2>
+    <p><strong>Nombre:</strong> {{ oficina.nombre }}</p>
+    <p><strong>Edad:</strong> {{ oficina.nombre_corto }}</p>
+    <a href="{% url 'oficina:lista' %}">Volver a la lista</a>
+{% endblock %}

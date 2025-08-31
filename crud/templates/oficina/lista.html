@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    {%if oficinas %}
+        <h1>Lista de Oficinas</h1>
+        <ul>
+            {% for oficina in oficinas %}
+                <li>{{ persona.nombre }}  - {{persona.oficina}}</li>
+            {% endfor %}
+        </ul>
+        {% include "paginator.html" %}
+    {% else %}
+        <p>No hay oficinas registradas.</p>
+    {% endif %}
+{% endblock content %}

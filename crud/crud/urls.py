@@ -22,6 +22,6 @@ urlpatterns = [
     path('persona/', include('persona.urls')),
     path('account/', include('allauth.urls')),
     path('captcha/', include('captcha.urls')),
-    path('oficina/', include('allauth.urls'))
+    path('oficina/', include('oficina.urls'))
     
 ]

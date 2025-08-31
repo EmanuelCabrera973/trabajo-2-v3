@@ -17,7 +17,7 @@ class Oficina(models.Model):
     class Meta:
         """meta definicion for oficina"""
         verbose_name = "Oficina"
-        verbose_name_plural = "Oficinas"
+        verbose_name_plural = "oficinas"
     def __str__(self):
         return  f'{self.nombre} - ({self.nombre_corto})'
     
