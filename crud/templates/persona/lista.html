@@ -8,6 +8,7 @@
                 <li>{{ persona.nombre }} - {{ persona.email }}</li>
             {% endfor %}
         </ul>
+        {% include "paginator.html" %}
     {% else %}
         <p>No hay personas registradas.</p>
     {% endif %}

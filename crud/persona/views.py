@@ -10,6 +10,7 @@ class PersonaListView(ListView):
     model = Persona
     template_name = "persona/lista.html"
     context_object_name = "personas"
+    paginate_by = 10
     
 class PersonaDetailView(DetailView):
     model = Persona
