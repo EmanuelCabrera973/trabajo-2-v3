@@ -5,7 +5,7 @@
         <h1>Lista de Pipol</h1>
         <ul>
             {% for persona in personas %}
-                <li>{{ persona.nombre }} - {{ persona.email }}</li>
+                <li>{{ persona.nombre }} - {{ persona.email }} - {{persona.oficina}}</li>
             {% endfor %}
         </ul>
         {% include "paginator.html" %}

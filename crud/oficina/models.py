@@ -10,13 +10,14 @@ class Oficina(models.Model):
     nombre=models.CharField(verbose_name="nombre de la oficina",
     max_length= 50, unique=True)
     nombre_corto = models.CharField(verbose_name = "id corto", max_length=10, unique=True,
-                                    help_text="Codigo corto unico. (ej: PER,ADM,etc)")
-    validators= [validate_nombre_corto]
+                                    help_text="Codigo corto unico. (ej: PER,ADM,etc)",
+    validators= [validate_nombre_corto],
+    )
     
     class Meta:
         """meta definicion for oficina"""
         verbose_name = "Oficina"
-        Verbose_name_plural = "Oficinas"
+        verbose_name_plural = "Oficinas"
     def __str__(self):
         return  f'{self.nombre} - ({self.nombre_corto})'
     

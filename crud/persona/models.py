@@ -7,7 +7,7 @@ class Persona(models.Model):
     edad = models.IntegerField(verbose_name="Edad")
     email = models.EmailField(verbose_name="correo Electronico", max_length=254, unique=True)
     nombre = models.CharField(verbose_name="Nombre y apellido", max_length=50)
-    oficina = models.ForeingKey(
+    oficina = models.ForeignKey(
         Oficina,
         verbose_name="oficina asignada",
         on_delete=models.PROTECT,
