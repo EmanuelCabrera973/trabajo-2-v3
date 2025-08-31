@@ -7,14 +7,15 @@ from oficina.models import Oficina
 def run(*args):
     if not args:
         print("Error: proporcionar ruta del archivo")
-        print("uso:./manage.py runscript import_oficinas --script-args <ruta del archivo>")
+        print("uso:./manage.py runscript importar_oficinas --script-args <ruta del archivo>")
+        sys.exit(1)
         
     csv_file = args[0]
     
     try:
         with open(csv_file,'r', encoding = 'utf8') as f:
             reader = csv.DictReader(f)
-            oficinas_crear =[]
+            oficinas_a_crear =[]
             
             for row in reader:
                 nombre = row.get('nombre')
@@ -27,7 +28,7 @@ def run(*args):
                 try:
                     oficina = Oficina(nombre=nombre, nombre_corto=nombre_corto)
                     oficina.full_clean()
-                    oficinas_crear.append(oficina)
+                    oficinas_a_crear.append(oficina)
                 except ValidationError as e:
                     print(f"Error de validación en la fila {row}. Detalle: {e}")
                 except Exception as e:
