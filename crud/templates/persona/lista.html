@@ -2,6 +2,7 @@
 
 {% block content%}
     {%if personas %}
+        <h1>Lista de Pipol</h1>
         <ul>
             {% for persona in personas %}
                 <li>{{ persona.nombre }} - {{ persona.email }}</li>
