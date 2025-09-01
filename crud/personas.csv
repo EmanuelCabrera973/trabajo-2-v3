@@ -1,101 +1,103 @@
-nombre,edad,email
-Maria Lopez,35,maria.lopez@example.com
-Juan Perez,28,juan.perez@example.org
-Ana Garcia,42,ana.garcia@test.net
-Pedro Martinez,51,pedro.martinez@sample.co
-Laura Rodriguez,23,laura.rodriguez@domain.com
-Carlos Sanchez,60,carlos.sanchez@email.com
-Sofia Fernandez,31,sofia.fernandez@provider.org
-Diego Gomez,39,diego.gomez@mail.net
-Valeria Diaz,27,valeria.diaz@example.com
-Andres Ruiz,45,andres.ruiz@sample.net
-Paula Hernandez,20,paula.hernandez@domain.com
-Javier Moreno,55,javier.moreno@email.org
-Camila Torres,33,camila.torres@provider.com
-Ricardo Blanco,48,ricardo.blanco@mail.net
-Daniel Salazar,29,daniel.salazar@example.org
-Luciana Castro,37,luciana.castro@test.com
-Fernando Vargas,62,fernando.vargas@sample.net
-Florencia Rojas,25,florencia.rojas@domain.org
-Manuel Ramos,50,manuel.ramos@email.com
-Valentina Morales,30,valentina.morales@provider.org
-Gonzalo Castillo,41,gonzalo.castillo@mail.net
-Mariana Ortiz,22,mariana.ortiz@example.com
-Cristian Gallardo,58,cristian.gallardo@sample.co
-Josefina Nuñez,36,josefina.nunez@domain.com
-Esteban Soto,43,esteban.soto@email.org
-Alejandra Reyes,26,alejandra.reyes@provider.com
-Mauricio Mendoza,49,mauricio.mendoza@mail.net
-Romina Contreras,32,romina.contreras@example.org
-Federico Ponce,53,federico.ponce@test.com
-Carolina Herrera,21,carolina.herrera@sample.net
-Joaquin Aguilar,65,joaquin.aguilar@domain.org
-Emilia Guzman,34,emilia.guzman@email.com
-Ignacio Caceres,40,ignacio.caceres@provider.org
-Lorena Bravo,24,lorena.bravo@mail.net
-Francisco Vera,56,francisco.vera@example.com
-Daniela Cordero,38,daniela.cordero@sample.co
-Martin Loyola,46,martin.loyola@domain.com
-Agustina Fuentes,27,agustina.fuentes@email.org
-Gabriel Orellana,52,gabriel.orellana@provider.com
-Catalina Medina,29,catalina.medina@mail.net
-Felipe Miranda,35,felipe.miranda@example.org
-Cecilia Soto,47,cecilia.soto@test.com
-Benjamin Jimenez,19,benjamin.jimenez@sample.net
-Victoria Moya,30,victoria.moya@domain.org
-Patricio Sanhueza,59,patricio.sanhueza@email.com
-Antonia Sepulveda,33,antonia.sepulveda@provider.org
-Leonardo Reyes,44,leonardo.reyes@mail.net
-Fernanda Araya,28,fernanda.araya@example.com
-Sebastian Perez,61,sebastian.perez@sample.co
-Isidora Torres,31,isidora.torres@domain.com
-Ramiro Figueroa,54,ramiro.figueroa@email.org
-Camila Rivas,22,camila.rivas@provider.com
-Luciano Navarro,48,luciano.navarro@mail.net
-Josefa Rojas,26,josefa.rojas@example.org
-Eduardo Salazar,57,eduardo.salazar@test.com
-Trinidad Soto,20,trinidad.soto@sample.net
-Benjamin Silva,63,benjamin.silva@domain.org
-Javiera Gonzalez,34,javiera.gonzalez@email.com
-Matias Pizarro,39,matias.pizarro@provider.org
-Renata Soto,23,renata.soto@mail.net
-Diego Fuentes,50,diego.fuentes@example.com
-Francisca Olivares,37,francisca.olivares@sample.co
-Maximiliano Vasquez,41,maximiliano.vasquez@domain.com
-Emilia Vega,25,emilia.vega@email.org
-Nicolas Carrasco,49,nicolas.carrasco@provider.com
-Constanza Vargas,32,constanza.vargas@mail.net
-Daniela Flores,29,daniela.flores@example.org
-Joaquin Soto,52,joaquin.soto@test.com
-Amanda Reyes,30,amanda.reyes@sample.net
-Cristobal Lagos,60,cristobal.lagos@domain.org
-Catalina Sepulveda,38,catalina.sepulveda@email.com
-Alonso Vidal,45,alonso.vidal@provider.org
-Isidora Martinez,27,isidora.martinez@mail.net
-Vicente Ramirez,55,vicente.ramirez@example.com
-Paz Soto,31,paz.soto@sample.co
-Felipe Jimenez,40,felipe.jimenez@domain.com
-Sofia Sanchez,24,sofia.sanchez@email.org
-Ignacio Contreras,53,ignacio.contreras@provider.com
-Valentina Moya,28,valentina.moya@mail.net
-Esteban Vera,42,esteban.vera@example.org
-Antonia Orellana,36,antonia.orellana@test.com
-Ricardo Miranda,62,ricardo.miranda@sample.net
-Javiera Bravo,21,javiera.bravo@domain.org
-Sebastian Pizarro,51,sebastian.pizarro@email.com
-Fernanda Soto,33,fernanda.soto@provider.org
-Gabriel Reyes,47,gabriel.reyes@mail.net
-Martina Araya,26,martina.araya@example.com
-Julian Gallardo,58,julian.gallardo@sample.co
-Romina Nuñez,35,romina.nunez@domain.com
-Agustin Cordero,43,agustin.cordero@email.org
-Paula Loyola,29,paula.loyola@provider.com
-Diego Fuentes,56,diego.fuentes@mail.net
-Valeria Sanchez,30,valeria.sanchez@example.org
-Andres Torres,65,andres.torres@test.com
-Camila Vega,25,camila.vega@sample.net
-Nicolas Jimenez,46,nicolas.jimenez@domain.org
-Sofia Araya,32,sofia.araya@email.com
-Patricio Silva,59,patricio.silva@provider.org
-Florencia Rojas,23,florencia.rojas@mail.net
-Manuel Vera,44,manuel.vera@example.com
+nombre,apellido,edad,oficina_nombre_corto
+ivan,lopez,23,LAMBO
+María,González,34,RRHH
+Juan,Pérez,41,ADM
+Lucía,Fernández,28,TI
+Diego,Rodríguez,39,VEN
+Carla,López,22,MRK
+Andrés,Martínez,45,PROD
+Sofía,Herrera,30,LOG
+Matías,Ruiz,37,CONT
+Valentina,Moreno,26,ADM
+Ignacio,Sánchez,33,RRHH
+Florencia,Silva,29,MKT
+Gabriel,Castro,40,TI
+Paula,Domínguez,31,PROD
+Javier,Vega,44,LOG
+Camila,Molina,25,VEN
+Daniel,Suárez,42,ADM
+Romina,Ortega,36,RRHH
+Sebastián,Luna,27,MRK
+Agustina,Prieto,32,PROD
+Martín,Carrizo,38,CONT
+Julieta,Aguilar,23,VEN
+Tomás,Mejía,41,TI
+Melina,Vargas,35,LOG
+Nicolás,Quintero,29,ADM
+Cecilia,Peralta,33,MKT
+Pablo,Navarro,46,PROD
+Diana,Farias,30,RRHH
+Federico,Bustamante,28,TI
+Natalia,Benítez,39,LOG
+Hernán,Ramos,44,ADM
+Micaela,Arce,25,VEN
+Rodrigo,Bravo,31,CONT
+Verónica,Cabrera,27,PROD
+Leandro,Flores,37,MKT
+Ailén,Díaz,40,RRHH
+Emiliano,Pardo,34,TI
+Rocío,Giménez,26,ADM
+Ezequiel,Bermúdez,32,LOG
+Vanesa,Olivera,45,VEN
+Cristian,Soria,38,PROD
+Laura,Franco,28,MKT
+Franco,Cardozo,41,CONT
+Marina,Ledesma,29,ADM
+Álvaro,Escobar,35,RRHH
+Nadia,Salazar,22,LOG
+Bruno,Garrido,33,VEN
+Lorena,Miranda,31,PROD
+Esteban,Rivero,36,MKT
+Antonella,Funes,30,TI
+Gustavo,Acosta,42,ADM
+Claudia,Ibarra,27,RRHH
+Oscar,Benito,39,LOG
+Silvina,Pizarro,25,VEN
+Hugo,Valdez,46,CONT
+Carolina,Ayala,28,MKT
+Juan Manuel,Delgado,37,PROD
+Belén,Ojeda,33,ADM
+Ramiro,Campos,40,RRHH
+Milagros,Nuñez,29,LOG
+Santiago,Coria,35,VEN
+Daiana,Flores,24,TI
+Matilde,Castro,32,FER
+Joaquín,Alonso,38,MKT
+Patricia,Domenech,30,ADM
+Lisandro,Paz,41,RRHH
+Yesica,Toledo,26,TYT
+Felipe,Godoy,44,LOG
+Eliana,Roldán,27,CONT
+Maximiliano,Santana,36,PROD
+Pamela,Reinoso,29,MKT
+Alejandro,Coria,33,AST
+Marisol,Medina,25,AST
+Gonzalo,Rey,39,TI
+Débora,Lima,28,VEN
+Iván,Muñoz,42,LOG
+Clara,Palacios,30,FER
+Agustín,Bello,34,FER
+Tamara,Gauna,23,MKT
+Mauricio,Ferreyra,37,ADM
+Josefina,Romero,26,RRHH
+Darío,Cruz,41,LOG
+Luciana,Cardoso,25,TI
+Héctor,Moyano,45,VEN
+Noelia,Santillán,28,FER
+Cristina,Ruíz,32,MKT
+Julián,Rivera,36,TYT
+Soledad,Arrieta,30,TYT
+Mateo,Segovia,27,RRHH
+Cintia,Castillo,39,AST
+Fabián,Pereyra,29,TI
+Daniela,Bravo,31,VEN
+Adrián,Morales,44,LAMBO
+Mariela,Quiroga,24,AST
+Fernando,Cáceres,40,ADM
+Selena,Coronel,22,RRHH
+Alejo,Montoya,33,LOG
+Brenda,Soto,25,VEN
+Victor,López,35,LAMBO
+Ana,Guerrero,30,TI
+Camilo,Bianchi,38,PROD
+Pilar,Ferrari,27,MKT
