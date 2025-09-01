@@ -4,5 +4,7 @@
     <p><strong>Nombre:</strong> {{ persona.nombre }}</p>
     <p><strong>Edad:</strong> {{ persona.edad }}</p>
     <p><strong>Email:</strong> {{ persona.email }}</p>
+    <p><strong>Oficina:</strong> {{ persona.oficina.nombre }}</p>
+    
     <a href="{% url 'persona:lista' %}">Volver a la lista</a>
 {% endblock %}

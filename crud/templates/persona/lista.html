@@ -1,15 +1,40 @@
 {% extends 'base.html' %}
 
 {% block content%}
-    {%if personas %}
-        <h1>Lista de Pipol</h1>
-        <ul>
-            {% for persona in personas %}
-                <li>{{ persona.nombre }} - {{ persona.email }} - {{persona.oficina}}</li>
-            {% endfor %}
-        </ul>
+ <h1>Lista de Personas</h1>
+    <p class="mb-2 text-muted">{{ page_obj.paginator.count }} personas encontradas.</p>
+
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for persona in personas %}
+                <tr>
+                    <th scope="row">{{ forloop.counter0|add:page_obj.start_index }}</th>
+                    <td>{{ persona.nombre }}</td>
+                    <td>{{ persona.oficina.nombre_corto }}</td>
+                    <td>{{ persona.edad }}</td>
+                    <td>
+                        <a href="{% url 'persona:detalle' persona.pk %}" class="btn btn-sm btn-outline-info">Ver</a>
+                        <a href="{% url 'persona:editar' persona.pk %}" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="{% url 'persona:eliminar' persona.pk %}" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5" class="text-center text-muted">No hay personas registradas.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
         {% include "paginator.html" %}
-    {% else %}
-        <p>No hay personas registradas.</p>
-    {% endif %}
 {% endblock content %}

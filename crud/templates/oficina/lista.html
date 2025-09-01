@@ -1,15 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content%}
-    {%if oficinas %}
-        <h1>Lista de Oficinas</h1>
-        <ul>
-            {% for oficina in oficinas %}
-                <li>{{ persona.nombre }}  - {{persona.oficina}}</li>
-            {% endfor %}
-        </ul>
-        {% include "paginator.html" %}
-    {% else %}
-        <p>No hay oficinas registradas.</p>
-    {% endif %}
+ <p class="mb-2 text-muted">{{ page_obj.paginator.count }} oficinas encontradas.</p>
+
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Nombre Corto</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for oficina in oficinas %}
+                <tr>
+                    <th scope="row">{{ forloop.counter0|add:page_obj.start_index }}</th>
+                    <td>{{ oficina.nombre }}</td>
+                    <td>{{ oficina.nombre_corto }}</td>
+                    <td>
+                        <a href="{% url 'oficina:detalle' oficina.pk %}" class="btn btn-sm btn-outline-info">Ver</a>
+                        <a href="{% url 'oficina:editar' oficina.pk %}" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="{% url 'oficina:eliminar' oficina.pk %}" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="text-center text-muted">No hay oficinas registradas.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination">
 {% endblock content %}

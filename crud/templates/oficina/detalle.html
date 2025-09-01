@@ -1,7 +1,40 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Detalle de Persona</h2>
-    <p><strong>Nombre:</strong> {{ oficina.nombre }}</p>
-    <p><strong>Edad:</strong> {{ oficina.nombre_corto }}</p>
-    <a href="{% url 'oficina:lista' %}">Volver a la lista</a>
+<div class="container mt-4">
+    <h2>Detalle de Oficina</h2>
+    <p><strong>Nombre:</strong> {{ oficinas.nombre }}</p>
+    <p><strong>Abreviación:</strong> {{ oficinas.nombre_corto }}</p>
+    
+    <!-- Tabla responsiva de personas -->
+    <h3 class="mt-4">Personas asociadas</h3>
+    
+    {% if oficinas.personas.all %}
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for persona in oficinas.personas.all %}
+                    <tr>
+                        <td>{{ persona.nombre }}</td>
+                        <td>{{ persona.email }}</td>
+                        <td>{{ persona.edad }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            No hay personas en esta oficina
+        </div>
+    {% endif %}
+    
+    <a href="{% url 'oficina:lista' %}" class="btn btn-secondary mt-3">Volver a la lista</a>
+</div>
 {% endblock %}

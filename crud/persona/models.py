@@ -10,17 +10,17 @@ class Persona(models.Model):
     oficina = models.ForeignKey(
         Oficina,
         verbose_name="oficina asignada",
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
         related_name="personas",
         null=True,
         blank=True,
     )
     class Meta:
-        verbose_name = ("Persona")
-        verbose_name_plural = ("Personas")
+        verbose_name = ("persona")
+        verbose_name_plural = ("personas")
     def __str__(self):
         return f'{self.nombre} - {self.email}'
 
     def get_absolute_url(self):
-        return reverse("Persona_detail", kwargs={"pk": self.pk})
+        return reverse("persona_detail", kwargs={"pk": self.pk})
 
