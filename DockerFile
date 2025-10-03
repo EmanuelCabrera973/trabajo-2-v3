@@ -3,7 +3,7 @@ FROM python:3.11-slim
 #VER LOGS EN TIEMPO REAL
 ENV PYTHONUNBUFFERED=1
 # Set working directory
-WORKDIR /app
+WORKDIR /crud
 
 # Copy requirements file if you have one
 #INSTALA DEPENDENCIAS:

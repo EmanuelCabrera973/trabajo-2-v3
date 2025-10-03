@@ -12,11 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-import environ
 
-env = environ.Env(
-    DEBUG=(bool, false) 
-)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mn1=dl%z!jhib3pl96&*03-9dkd_gwyxh#69y9oq&iw)%8bf!y'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = True
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(",")
 
 
 # Application definition
@@ -94,11 +91,11 @@ WSGI_APPLICATION = 'crud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':   env('POSTGRES_DB'),
-        'USER':   env('POSTGRES_USER'),
-        'PASSWORD': env('POSTGRES_PASSWORD'),
-        'HOST':   env('POSTGRES_HOST'),
-        'PORT':   env('POSTGRES_PORT'),
+        'NAME':   os.env.get('POSTGRES_DB'),
+        'USER':   os.env.get('POSTGRES_USER'),
+        'PASSWORD': os.env.get('POSTGRES_PASSWORD'),
+        'HOST':   os.env.get('POSTGRES_HOST'),
+        'PORT':   os.env.get('POSTGRES_PORT'),
     }
 }
 

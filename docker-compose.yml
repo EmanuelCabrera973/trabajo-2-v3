@@ -16,7 +16,7 @@ services:
     ports:
       - '8000:8000'
     volumes:
-      - ./crud
+      - ./crud:/crud
     env_file:
       - .env
     environment:
